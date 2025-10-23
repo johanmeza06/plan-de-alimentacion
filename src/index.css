@@ -75,6 +75,14 @@ html {
   scroll-behavior: smooth;
   /* Asegurar que el HTML use toda la pantalla */
   height: 100%;
+  /* Importante: extender el fondo a toda la pantalla incluyendo safe areas */
+  background-color: #607afb;
+  background-color: var(--color-primary);
+}
+
+/* Dark mode para HTML */
+html.dark {
+  background-color: #0f1323;
 }
 
 body {
@@ -86,12 +94,34 @@ body {
   /* Usar toda la pantalla incluyendo safe areas */
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+
+  /* El body tendrá el color de la aplicación, no el del tema */
+  background-color: #f5f6f8;
+  background-color: var(--color-background);
+}
+
+/* Root container - aquí es donde aplicamos las safe areas */
+#root {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  /* Safe areas padding - esto es clave para iOS */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+
+  /* El contenido de la app */
+  background-color: #f5f6f8;
+  background-color: var(--color-background);
 }
 
 /* PWA Safe Areas - iOS específico */
 @supports (padding: max(0px)) {
-  body {
-    /* Extender el fondo a toda la pantalla */
+  #root {
+    /* Extender el padding usando max() para mejor compatibilidad */
     padding-top: max(env(safe-area-inset-top), 0px);
     padding-bottom: max(env(safe-area-inset-bottom), 0px);
     padding-left: max(env(safe-area-inset-left), 0px);
@@ -101,32 +131,53 @@ body {
 
 /* PWA Safe Areas para modo standalone */
 @media (display-mode: standalone) {
+  /* HTML mantiene el color del tema en las safe areas */
   html {
-    background-color: #607afb;
-    background-color: var(--color-primary);
+    background-color: #607afb !important;
+    background-color: var(--color-primary) !important;
   }
 
   body {
-    /* En modo standalone, usar el color del tema para las áreas seguras */
+    /* Asegurar que el viewport use toda la pantalla */
+    position: relative;
+    overflow-x: hidden;
     background-color: #f5f6f8;
     background-color: var(--color-background);
   }
 
-  /* Safe areas específicas para iPhone */
+  /* El root container se adapta perfectamente */
   #root {
+    position: relative;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    position: relative;
+    background-color: #f5f6f8;
+    background-color: var(--color-background);
   }
 }
 
 /* Dark mode safe areas */
-@media (display-mode: standalone) and (prefers-color-scheme: dark) {
-  html {
+.dark html {
+  background-color: #0f1323 !important;
+}
+
+.dark body {
+  background-color: #0f1323;
+}
+
+.dark #root {
+  background-color: #0f1323;
+}
+
+@media (display-mode: standalone) {
+  .dark html {
+    background-color: #0f1323 !important;
+  }
+
+  .dark body {
     background-color: #0f1323;
   }
 
-  .dark html {
+  .dark #root {
     background-color: #0f1323;
   }
 }

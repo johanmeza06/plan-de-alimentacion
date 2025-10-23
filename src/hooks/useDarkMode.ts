@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { updateSafeAreaColors } from "../utils/safeAreas";
 
 export function useDarkMode() {
   const [isDark, setIsDark] = useState(() => {
@@ -18,6 +19,9 @@ export function useDarkMode() {
       root.classList.remove("dark");
     }
     localStorage.setItem("darkMode", JSON.stringify(isDark));
+
+    // Actualizar colores de safe areas
+    updateSafeAreaColors(isDark);
   }, [isDark]);
 
   const toggleDarkMode = () => setIsDark(!isDark);
