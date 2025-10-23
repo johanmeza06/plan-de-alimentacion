@@ -73,6 +73,8 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* Asegurar que el HTML use toda la pantalla */
+  height: 100%;
 }
 
 body {
@@ -81,13 +83,51 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Usar toda la pantalla incluyendo safe areas */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
-/* PWA Safe Areas */
-@media (display-mode: standalone) {
+/* PWA Safe Areas - iOS específico */
+@supports (padding: max(0px)) {
   body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
+    /* Extender el fondo a toda la pantalla */
+    padding-top: max(env(safe-area-inset-top), 0px);
+    padding-bottom: max(env(safe-area-inset-bottom), 0px);
+    padding-left: max(env(safe-area-inset-left), 0px);
+    padding-right: max(env(safe-area-inset-right), 0px);
+  }
+}
+
+/* PWA Safe Areas para modo standalone */
+@media (display-mode: standalone) {
+  html {
+    background-color: #607afb;
+    background-color: var(--color-primary);
+  }
+
+  body {
+    /* En modo standalone, usar el color del tema para las áreas seguras */
+    background-color: #f5f6f8;
+    background-color: var(--color-background);
+  }
+
+  /* Safe areas específicas para iPhone */
+  #root {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+  }
+}
+
+/* Dark mode safe areas */
+@media (display-mode: standalone) and (prefers-color-scheme: dark) {
+  html {
+    background-color: #0f1323;
+  }
+
+  .dark html {
+    background-color: #0f1323;
   }
 }
 
