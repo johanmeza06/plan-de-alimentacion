@@ -66,6 +66,14 @@ export const PLAN: WeekPlan = {
         "1 lámina de queso llanero + 1 lámina de jamón acaramelado/mortadela",
         "1 scoop (30 g) whey cookies & cream en 240 ml de agua",
       ],
+      alternativa: {
+        items: [
+          "4 rebanadas pan molde blanco o 2 integrales (↔ marraqueta/salmas)",
+          "Queso fresco/quesillo light 60 g + pechuga de pavo 40–60 g (↔ queso + jamón)",
+          "Yoghurt descremado 120–125 g",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos)",
+        ],
+      },
     },
     colacionMedioDia: null,
     almuerzo: {
@@ -147,6 +155,14 @@ export const PLAN: WeekPlan = {
         "1 lámina jamón acaramelado/mortadela",
         "1 scoop (30 g) whey cookies & cream en 240 ml de agua",
       ],
+      alternativa: {
+        items: [
+          "4 rebanadas pan molde blanco o 2 integrales (↔ marraqueta/salmas)",
+          "Pechuga de pavo 60–80 g o queso fresco light 60 g (↔ jamón)",
+          "Yoghurt descremado 120–125 g (↔ whey)",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos)",
+        ],
+      },
     },
     colacionMedioDia: null,
     almuerzo: {
@@ -195,6 +211,12 @@ export const PLAN: WeekPlan = {
     colacionTarde: {
       hora: HORAS.colacionTarde.lunVie,
       items: ["Proteína whey en agua + plátano (rodajas)"],
+      alternativa: {
+        items: [
+          "Yoghurt descremado 120–125 g + manzana chica + 5 almendras",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos)",
+        ],
+      },
     },
     preEntreno: {
       hora: HORAS.preEntreno.lunVie,
@@ -217,6 +239,14 @@ export const PLAN: WeekPlan = {
         "6–14 cdtas mermelada 0% azúcar (Regimel)",
         "1 scoop (30 g) whey cookies & cream en 240 ml de agua",
       ],
+      alternativa: {
+        items: [
+          "Pan molde 4 rebanadas o 2 integrales (↔ marraqueta/salmas)",
+          "1 porción de fruta (↔ mermelada 0% en dulzor)",
+          "Yoghurt descremado 120–125 g (↔ whey)",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos) sin el batido",
+        ],
+      },
     },
     colacionMedioDia: {
       hora: HORAS.colacionMedioDia.sabDom,
@@ -255,6 +285,14 @@ export const PLAN: WeekPlan = {
         "1 lámina queso llanero + 1 lámina jamón acaramelado/mortadela",
         "1 scoop (30 g) whey cookies & cream en 240 ml de agua",
       ],
+      alternativa: {
+        items: [
+          "2 Rapiditas M o 1 wrap XL o 4 rebanadas de pan (↔ marraqueta/salmas)",
+          "Queso fresco light 60 g + pavo 40–60 g (↔ queso + jamón)",
+          "Yoghurt descremado 120–125 g (↔ whey)",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos) sin el batido",
+        ],
+      },
     },
     colacionMedioDia: {
       hora: HORAS.colacionMedioDia.sabDom,
@@ -321,9 +359,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       alternativa: {
         descripcion: "Equivalente por porciones",
         items: [
-          "2 tortillas Rapiditas M o 1 wrap XL integral",
-          "120 g pechuga de pavo a la plancha (equiv. a 2 huevos) o 6 claras",
-          "1 yoghurt descremado 120–125 g en lugar de la 1/2 taza de leche",
+          "2 tortillas Rapiditas M o 1 wrap XL integral (↔ marraqueta/salmas)",
+          "120 g pechuga de pavo o 1/2–1 lata de atún al agua (↔ 2 huevos) o 6 claras",
+          "Yoghurt descremado 120–125 g (↔ 1/2 taza de leche)",
         ],
       },
     },
@@ -338,10 +376,10 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Porotos o garbanzos cocidos 2 tazas (en vez de lentejas 2 tazas)",
-          "Fideos cocidos 1 taza o 1 papa mediana cocida (en vez de arroz 1 taza)",
-          "Atún al agua 1–1½ latas drenadas o reineta 160–200 g en vez de pollo",
-          "Verduras equivalentes: brócoli/repollo/zanahoria en mismas porciones",
+          "Legumbre equivalente: porotos o garbanzos 2 tazas (↔ lentejas 2 tazas)",
+          "Fideos 1 taza o 1 papa mediana cocida (↔ arroz 1 taza)",
+          "Reineta/merluza 160–200 g o atún al agua 1–1½ latas (↔ pollo)",
+          "Verduras equivalentes en mismas porciones (brócoli/zanahoria/repollo)",
         ],
       },
     },
@@ -377,7 +415,7 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
         items: [
           "1½ marraqueta o 2 Rapiditas M + pechuga de pollo 120–150 g",
           "Ensalada equivalente: repollo 2 tazas + zanahoria 1/2 taza + tomate 1",
-          "Yoghurt descremado 120–125 g en lugar de la taza de café con leche",
+          "Yoghurt descremado 120–125 g o tomar el cafe durante el dia (↔ café con leche)",
         ],
       },
     },
@@ -394,9 +432,10 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "3 rebanadas pan molde blanco o 2 integrales",
-          "Quesillo/queso fresco light 60 g + pechuga de pavo 40–60 g",
-          "1 yoghurt descremado 120–125 g en vez de whey",
+          "4 rebanadas pan molde blanco o 2 integrales (↔ marraqueta/salmas)",
+          "Queso fresco/quesillo light 60 g + pechuga de pavo 40–60 g (↔ queso + jamón)",
+          "Yoghurt descremado 120–125 g",
+          "(↔ whey) usar 5 trozos de pollo (250g crudos)",
         ],
       },
     },
@@ -410,8 +449,8 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Reineta/merluza 160–200 g o pechuga de pollo 150 g",
-          "Arroz 3/4–1 taza en lugar de choclo 2 tazas (equivalencia cereal)",
+          "Reineta/merluza 160–200 g o pechuga de pollo 150 g (↔ atún/jurel)",
+          "Arroz 3/4–1 taza (↔ choclo 2 tazas, equivalencia cereal)",
           "Verduras equivalentes: brócoli 2 tazas + tomate 1",
         ],
       },
@@ -447,8 +486,8 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Vacuno magro 150 g o pechuga pollo 150 g",
-          "Fideos cocidos 1 taza o arroz 1 taza en vez de puré",
+          "Vacuno magro 150 g o pechuga pollo 150 g (↔ cerdo)",
+          "Fideos Cocidos 1 taza o arroz 1 taza (↔ puré 1½ taza)",
           "Ensalada equivalente: repollo 2 tazas + zanahoria 1/2 taza",
         ],
       },
@@ -466,9 +505,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "2 Rapiditas M o 1 wrap XL integral",
-          "Atún al agua 1/2–1 lata drenada (como proteína) o 6 claras",
-          "Yoghurt descremado 120–125 g",
+          "2 Rapiditas M o 1 wrap XL integral (↔ marraqueta/salmas)",
+          "Atún al agua 1/2–1 lata drenada o 6 claras (↔ 2 huevos)",
+          "Yoghurt descremado 120–125 g (↔ 1/2 taza leche)",
         ],
       },
     },
@@ -483,8 +522,8 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Pescado magro 200–240 g o pechuga pollo 180–200 g",
-          "Arroz 1½ tazas o fideos 1½ tazas (equivalente al puré 2 tazas)",
+          "Pescado magro 200–240 g o pechuga pollo 180–200 g (↔ cerdo)",
+          "Arroz 1½ tazas o fideos 1½ tazas (↔ puré 2 tazas)",
           "Ensalada: repollo 2 tazas + tomate 1",
         ],
       },
@@ -528,9 +567,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "3 rebanadas pan molde blanco o 2 integrales",
-          "Pechuga de pavo 60–80 g o queso fresco light 60 g",
-          "Yoghurt descremado 120–125 g",
+          "4 rebanadas pan molde blanco o 2 integrales (↔ marraqueta/salmas)",
+          "Pechuga de pavo 60–80 g o queso fresco light 60 g (↔ jamón)",
+          "Yoghurt descremado 120–125 g (↔ whey) 5 trozos de pollo (250g crudos)",
         ],
       },
     },
@@ -571,8 +610,8 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       alternativa: {
         items: [
           "2 Rapiditas M o 1 wrap XL integral",
-          "Pechuga de pollo 150 g + 1 cda mayonesa light o palta 2 cdas",
-          "Yoghurt descremado 120–125 g",
+          "Pechuga de pollo 150 g + 1 cda mayonesa light o palta 2 cdas (↔ atún con mayo)",
+          "Yoghurt descremado 120–125 g (↔ café con leche)",
         ],
       },
     },
@@ -589,9 +628,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Pan pita 1–1½ unid. o 2 Rapiditas M",
-          "Atún al agua 1/2–1 lata o pavo 120 g",
-          "Yoghurt descremado 120–125 g",
+          "Pan pita 1–1½ unid. o 2 Rapiditas M o pan molde 4 rebanadas (↔ marraqueta/salmas)",
+          "Atún al agua 1/2–1 lata o pavo 120 g (↔ 2 huevos)",
+          "Yoghurt descremado 120–125 g (↔ café con leche)",
         ],
       },
     },
@@ -604,8 +643,8 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Porotos negros 3 tazas o garbanzos 3 tazas",
-          "Arroz 1 taza añadido si prefieres parte de cereal (mantén equivalencia total)",
+          "Porotos negros 3 tazas o garbanzos 3 tazas (↔ lentejas 3 tazas)",
+          "Arroz 1 taza si quieres incluir cereal (ajusta total de cereal del día)",
         ],
       },
     },
@@ -613,7 +652,10 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       hora: HORAS.colacionTarde.lunVie,
       items: ["Proteína whey en agua + plátano (rodajas)"],
       alternativa: {
-        items: ["Yoghurt descremado 120–125 g + manzana chica + 5 almendras"],
+        items: [
+          "Yoghurt descremado 120–125 g + manzana chica + 5 almendras",
+          "(↔ whey) usar 5 trozos de pollo o vacuno (250 g crudos)",
+        ],
       },
     },
     preEntreno: {
@@ -634,7 +676,7 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       alternativa: {
         items: [
           "Crackers integrales 10–12 unid. + hummus 1/2 taza + pechuga pollo 150 g",
-          "Opcional 1 porción de palta (2–4 cdas) en lugar de otras grasas",
+          "Opcional: 2–4 cdas palta (↔ grasa saludable)",
         ],
       },
     },
@@ -651,16 +693,16 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Pan molde 3 rebanadas o 2 integrales + fruta 1 porción en vez de mermelada",
-          "Yoghurt descremado 120–125 g en lugar de whey",
+          "Pan molde 4 rebanadas o 2 integrales (↔ marraqueta/salmas)",
+          "1 porción de fruta (↔ mermelada 0% en dulzor)",
+          "Yoghurt descremado 120–125 g (↔ whey) 5 trozos de pollo (250g crudos) sin el batido",
         ],
       },
     },
     colacionMedioDia: {
       hora: HORAS.colacionMedioDia.sabDom,
       items: ["2 tazas de frutillas"],
-      sustitutos: ["2 manzanas chicas o 1 regular"],
-      alternativa: { items: ["Sandía/melón 2 tazas o mango 1 taza"] },
+      alternativa: { items: ["2 manzanas chicas o 1 regular"] },
     },
     almuerzo: {
       hora: HORAS.almuerzo.sabDom,
@@ -673,9 +715,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Pechuga pollo 200 g o pescado magro 220–240 g",
-          "Puré 2 tazas o fideos 2 tazas (equivalente al arroz 2 tazas)",
-          "Legumbre equivalente: lentejas 1½ taza",
+          "Pechuga pollo 200 g o pescado magro 220–240 g (↔ vacuno)",
+          "Puré 2 tazas o fideos 2 tazas (↔ arroz 2 tazas)",
+          "Legumbre equivalente: lentejas 1½ taza (↔ porotos 1½ taza)",
         ],
       },
     },
@@ -691,7 +733,7 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       alternativa: {
         descripcion: "Marco de equivalencias",
         items: [
-          "Elegir 1 proteína magra (~150–200 g) + 1 cereal (1–2 porciones) + verduras libres",
+          "Elegir 1 proteína magra (~150–200 g) + 1–2 porciones de cereal/pan + verduras libres/colores + 1 porción de grasa saludable si aplica",
         ],
       },
     },
@@ -714,9 +756,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "2 Rapiditas M o 1 wrap XL",
-          "Queso fresco light 60 g + pavo 40–60 g",
-          "Yoghurt descremado 120–125 g",
+          "2 Rapiditas M o 1 wrap XL (↔ marraqueta/salmas)",
+          "Queso fresco light 60 g + pavo 40–60 g (↔ queso + jamón)",
+          "Yoghurt descremado 120–125 g (↔ whey) 5 trozos de pollo (250g crudos) sin el batido",
         ],
       },
     },
@@ -735,7 +777,7 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Arroz 2 tazas + atún al agua 1½–2 latas drenadas o pollo 180–200 g",
+          "Arroz 2 tazas + atún al agua 1½–2 latas o pollo 180–200 g (↔ spaghetti + sardinas)",
           "Ensalada: repollo 2 tazas + tomate 1",
         ],
       },
@@ -757,9 +799,9 @@ export const PLAN_CON_ALTERNATIVAS: WeekPlan = {
       ],
       alternativa: {
         items: [
-          "Reineta/merluza 180–200 g o vacuno magro 150–180 g",
-          "Cereal equivalente: arroz 1 taza o fideos 1 taza en vez de papas",
-          "Grasa equivalente: 5 nueces en lugar de 4 cdas de palta",
+          "Reineta/merluza 180–200 g o vacuno magro 150–180 g (↔ pollo)",
+          "Arroz 1 taza o fideos 1 taza (↔ papas)",
+          "5 nueces (↔ 4 cdas palta)",
         ],
       },
     },
